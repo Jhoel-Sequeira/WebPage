@@ -1,42 +1,78 @@
+:root {
+  --color-primario: #1b1b1bd3;
+  --tamano-fuente: 16px;
+}
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+body{
+  margin: 0;
+  background-color: var(--color-primario);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Estilos para el encabezado */
+.header {
+  background-color: #222; /* Color de fondo del encabezado */
+  color: #fff; /* Color de texto del encabezado */
+  padding: 10px 0; /* Espaciado interior del encabezado */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Estilos para el contenedor del encabezado */
+.header-container {
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrar el contenedor en la página */
+  display: flex; /* Mostrar los elementos en línea (en una fila) */
+  justify-content: space-between; /* Distribuir elementos de manera uniforme horizontalmente */
+  align-items: center; /* Centrar verticalmente los elementos */
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan a una nueva línea en pantallas pequeñas */
+}
+
+/* Estilos para el título del encabezado */
+.header-title {
+  font-size: 24px; /* Tamaño de fuente del título */
+  margin: 0; /* Eliminar márgenes superior e inferior */
+}
+
+/* Estilos para la navegación del encabezado */
+.header-nav {
+  font-size: 16px; /* Tamaño de fuente del menú de navegación */
+}
+
+/* Estilos para la lista del menú */
+.header-menu {
+  list-style-type: none; /* Quitar viñetas de la lista */
+  padding: 0; /* Eliminar el espacio interior de la lista */
+  display: flex; /* Mostrar elementos del menú en línea (en una fila) */
+  margin-top: 10px; /* Espacio superior en pantallas pequeñas */
+}
+
+/* Estilos para los elementos del menú */
+.header-menu-item {
+  margin-right: 20px; /* Espacio entre elementos del menú */
+}
+
+/* Estilos para los enlaces del menú */
+.header-menu-item a {
+  text-decoration: none; /* Quitar subrayado de los enlaces */
+  color: #fff; /* Color de texto de los enlaces */
+  transition: color 0.3s; /* Transición suave de color al pasar el mouse */
+}
+
+/* Estilos para los enlaces del menú al pasar el mouse */
+.header-menu-item a:hover {
+  color: #ff9900; /* Cambiar el color al pasar el mouse */
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Apilar elementos verticalmente en pantallas pequeñas */
+    text-align: center; /* Centrar el texto en pantallas pequeñas */
   }
-  to {
-    transform: rotate(360deg);
+
+  .header-menu {
+    justify-content: center; /* Centrar elementos del menú en pantallas pequeñas */
+    margin-top: 20px; /* Espacio superior adicional en pantallas pequeñas */
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
